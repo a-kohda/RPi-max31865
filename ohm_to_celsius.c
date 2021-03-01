@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// http://seppina.cocolog-nifty.com/blog/2016/03/pt100-36de.html
-
 int main(int argc, char *argv[]){
   float R0, R, dR, T;
   R0 = 100;
