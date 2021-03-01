@@ -2,6 +2,7 @@
 
 - RPi\_max31865.py
   - max31865から抵抗値を読み出します。引数にCSに使うGPIOピン番号を指定します。
+
 ```
 > python RPi_max31865.py <CS pin number>
 ```
