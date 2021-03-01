@@ -27,11 +27,11 @@ def spiread(spi, r_ref=430):
     GPIO.output(abcs, GPIO.LOW)
     spi.xfer([0x80, 0b10010010])             # v-bias on
     GPIO.output(abcs, GPIO.HIGH)
-    sleep(0.01)                               # wait for RTDIN-capacitor full
+    sleep(0.1)                               # wait for RTDIN-capacitor full
     GPIO.output(abcs, GPIO.LOW)
     spi.xfer([0x80, 0b10110010])             # start 1-shot reading
     GPIO.output(abcs, GPIO.HIGH)
-    sleep(0.01)                               # wait for saving to register
+    sleep(0.1)                               # wait for saving to register
     GPIO.output(abcs, GPIO.LOW)
     bits = spi.xfer([0x01, 0x00, 0x00])[1:]  # read bits
     GPIO.output(abcs, GPIO.HIGH)
